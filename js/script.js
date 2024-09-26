@@ -1,4 +1,6 @@
 // 모듈 타입일땐 "./경로.js" 해야함
+// data.js에서 내보낸 themeData를 비구조화할당으로 불러옴
+// 모듈타입의 스크립트 파일간에는 export, import로 데이터값 전달
 import { themeData } from "./data.js";
 console.log(themeData); //확인
 
