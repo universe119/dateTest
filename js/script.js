@@ -38,23 +38,22 @@ function setTime(num, index) {
 function changeTheme() {
 	const hr = new Date().getHours();
 
-	if (hr >= 5 && hr < 11) {
-		main.className = "";
-		main.classList.add("morning");
-	}
-	if (hr >= 11 && hr < 16) {
-		main.className = "";
-		main.classList.add("afternoon");
-	}
-	if (hr >= 16 && hr < 20) {
-		main.className = "";
-		main.classList.add("evening");
-	}
-	if (hr >= 20 || hr < 5) {
-		main.className = "";
-		main.classList.add("night");
-	}
+	const themeData = [
+		{ className: "morning", period: [5, 11] },
+		{ className: "afternoon", period: [11, 16] },
+		{ className: "evening", period: [16, 20] },
+		{ className: "night", period: [20, 5] },
+	];
+
+	main.className = "";
+
+	if (hr >= 5 && hr < 11) main.classList.add("morning");
+
+	if (hr >= 11 && hr < 16) main.classList.add("afternoon");
+
+	if (hr >= 16 && hr < 20) main.classList.add("evening");
+
+	if (hr >= 20 || hr < 5) main.classList.add("night");
 }
 
-//만약 오후 1시가 넘어가면 (13시 이상일때 다시 01로 표기법 변경)
-// 1시 35분까지
+//미션 - changeTheme함수 안쪽에 특정 정보값을 배열로 분리한 뒤, 조건식 부분을 반복문 처리해보기
