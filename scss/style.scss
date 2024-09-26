@@ -11,7 +11,7 @@ main {
   article {
     width: 35%;
     position: absolute;
-    top: 55%;
+    top: 57%;
     left: 5%;
     color: #fff;
 
@@ -98,7 +98,15 @@ main {
       background-image: url(../img/phone_night.png);
     }
   }
+  &.afternoon {
+    figure .screen {
+      em, span {
+        color: #555;
+      }
+    }
+  }
 }
+
 
 // 반응형 수정
 @media screen and (max-width:1600px) {
