@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js"></script>
-    <script defer src="js/script.js"></script>
+    <!-- type="module"은 defer랑 같은 동작인데 각각의 파일 스코프가 모듈화가 되면서 전역변수를 막을 수 있음 -->
+    <script src="js/script.js" type="module"></script>
+    <script src="js/test.js" type="module"></script>
   </head>
   <body>
     <main class="">
